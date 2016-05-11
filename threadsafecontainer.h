@@ -10,7 +10,6 @@
 template<class T>
 class ThreadSafeContainer{
 public:
-	//typedef T value_type;
 
 	// make the queue non-copyable
 	//queue_lock(const queue_lock& ) = delete;
