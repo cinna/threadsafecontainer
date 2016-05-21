@@ -2,39 +2,18 @@
     CONSOLE APPLICATION : ThreadSafeContainer Project Overview
 ========================================================================
 
-AppWizard has created this ThreadSafeContainer application for you.
-
-This file contains a summary of what you will find in each of the files that
-make up your ThreadSafeContainer application.
-
-
-ThreadSafeContainer.vcxproj
-    This is the main project file for VC++ projects generated using an Application Wizard.
-    It contains information about the version of Visual C++ that generated the file, and
-    information about the platforms, configurations, and project features selected with the
-    Application Wizard.
-
-ThreadSafeContainer.vcxproj.filters
-    This is the filters file for VC++ projects generated using an Application Wizard. 
-    It contains information about the association between the files in your project 
-    and the filters. This association is used in the IDE to show grouping of files with
-    similar extensions under a specific node (for e.g. ".cpp" files are associated with the
-    "Source Files" filter).
-
-ThreadSafeContainer.cpp
-    This is the main application source file.
+Thread safe is the implementation of a non-blocking thread safe queue. 
 
 /////////////////////////////////////////////////////////////////////////////
-Other standard files:
+The add method will add one element to the FIFO and, if needed, block the caller until space is available.
 
-StdAfx.h, StdAfx.cpp
-    These files are used to build a precompiled header (PCH) file
-    named ThreadSafeContainer.pch and a precompiled types file named StdAfx.obj.
+The remove method will block the caller until an element is available for retrieval.   
 
-/////////////////////////////////////////////////////////////////////////////
-Other notes:
+The clear method will remove any objects which were added, but not yet removed.
 
-AppWizard uses "TODO:" comments to indicate parts of the source code you
-should add to or customize.
+The shutdown method will cause any blocked or future calls to add or remove to throw a ShutdownException
 
 /////////////////////////////////////////////////////////////////////////////
+
+
+
